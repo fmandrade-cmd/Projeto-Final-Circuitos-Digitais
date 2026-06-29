@@ -7,7 +7,7 @@ O projeto responde diretamente ao desafio de criar soluções tecnológicas volt
 ---
 
 ## 📌 Contextualização e Motivação
-A garantia de acesso à água potável exige um monitoramento rigoroso e em tempo real de parâmetros físicos e químicos. Este protótipo simula um sistema de análise automatizado que recebe dados digitais já convertidos de múltiplos sensores ambientais e realiza o processamento aritmético e lógico para determinar o nível crítico de contaminação da água, exibindo o alerta visual formatado para o usuário final.
+A garantia de acesso à água potável exige um monitoramento rigoroso e em tempo real de parâmetros físicos e químicos. Este protótipo simula um sistema de análise automatizado que recebe dados digitais já convertidos de múltiplos sensores ambientais e realiza o processamento aritmético e lógico para determinar o nível crítico de contaminação de microplástico da água, exibindo o alerta visual formatado para o usuário final.
 
 ---
 
@@ -17,8 +17,9 @@ O circuito cumpre rigorosamente os requisitos desejáveis estipulados no regulam
 * **Sensores de Entrada:** 3 entradas de sensoriamento independentes:
   * **Sensor de Turbidez ($S_T$):** Numérico, quantizado em 5 bits ($0$ a $31$).
   * **Sensor de Condutividade ($S_C$):** Numérico, quantizado em 5 bits ($0$ a $31$).
-  * *(Opcional: adicione aqui o 3º sensor binário ou digital utilizado no seu grupo, ex: Sensor de Fluxo/Nível)*.
-* **Componentes Utilizados:** Circuitos aritméticos (Somador de 5 bits), Comparadores de magnitude, Flip-Flops (Lógica Sequencial de Estado), Portas Lógicas e um Decodificador Customizado para Display de 7 Segmentos.
+  * **Sensor de pH ($S_pH$):** Numérico, quantizado em 4 bits ($0$ a $15$).
+  * **Sensor Ultrassônico:** Numérico, quantizado em 1 bit ($0$ ou $1$).
+* **Componentes Utilizados:** Circuitos aritméticos (Somador de 5 bits), Comparadores de magnitude, Flip-Flops com Clock (Lógica Sequencial de Estado), Portas Lógicas e um Decodificador Customizado para Display de 7 Segmentos.
 * **Saídas:** Display de 7 segmentos de Cátodo Comum para indicação do nível de alerta ($0$ a $3$) e alarmes lógicos paralelos.
 
 ---
