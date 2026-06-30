@@ -7,7 +7,16 @@ O projeto responde diretamente ao desafio de criar soluções tecnológicas volt
 ---
 
 ## 📌 Contextualização e Motivação
-A garantia de acesso à água potável exige um monitoramento rigoroso e em tempo real de parâmetros físicos e químicos. Este protótipo simula um sistema de análise automatizado que recebe dados digitais já convertidos de múltiplos sensores ambientais e realiza o processamento aritmético e lógico para determinar o nível crítico de contaminação de microplástico da água, exibindo o alerta visual formatado para o usuário final.
+A garantia de acesso à água potável exige um monitoramento rigoroso e em tempo real de parâmetros físicos e químicos. Este protótipo simula um sistema de análise automatizado que recebe dados digitais já convertidos de múltiplos sensores ambientais e realiza o processamento aritmético e lógico para determinar o nível crítico de contaminação da água, exibindo o alerta visual formatado para o usuário final.
+
+---
+
+## 📺 Demonstrações em Vídeo (Entregas Finais)
+
+Conforme os critérios de avaliação e diretrizes estabelecidos para o projeto, os materiais em vídeo com as defesas acadêmica e técnica estão disponíveis nos links abaixo:
+
+* 🎥 **Pitch Acadêmico (Apresentação do Projeto):** [Assista ao Vídeo da Apresentação](https://drive.google.com/file/d/10JCxTmI6hznK7x_0tEeMdDhvsMro1Y6Z/view?usp=drive_link) — Vídeo conceitual detalhando o problema mapeado, a comunidade afetada, o alinhamento com os ODS e a justificativa socioambiental da solução proposta.
+* ⚙️ **Funcionamento Detalhado do Circuito:** [Assista ao Vídeo do Circuito no WiredPanda](https://drive.google.com/file/d/15GSFxpngLpf1Q29vYK20TegOaMhPfPF2/view?usp=drive_link) — Demonstração técnica gravada diretamente no simulador, comprovando a execução dos roteiros de teste e o comportamento lógico do hardware sob estresse.
 
 ---
 
@@ -17,9 +26,8 @@ O circuito cumpre rigorosamente os requisitos desejáveis estipulados no regulam
 * **Sensores de Entrada:** 3 entradas de sensoriamento independentes:
   * **Sensor de Turbidez ($S_T$):** Numérico, quantizado em 5 bits ($0$ a $31$).
   * **Sensor de Condutividade ($S_C$):** Numérico, quantizado em 5 bits ($0$ a $31$).
-  * **Sensor de pH ($S_pH$):** Numérico, quantizado em 4 bits ($0$ a $15$).
-  * **Sensor Ultrassônico:** Numérico, quantizado em 1 bit ($0$ ou $1$).
-* **Componentes Utilizados:** Circuitos aritméticos (Somador de 5 bits), Comparadores de magnitude, Flip-Flops com Clock (Lógica Sequencial de Estado), Portas Lógicas e um Decodificador Customizado para Display de 7 Segmentos.
+  * *(Opcional: adicione aqui o 3º sensor binário ou digital utilizado no seu grupo, ex: Sensor de Fluxo/Nível)*.
+* **Componentes Utilizados:** Circuitos aritméticos (Somador de 5 bits), Comparadores de magnitude, Flip-Flops (Lógica Sequencial de Estado), Portas Lógicas e um Decodificador Customizado para Display de 7 Segmentos.
 * **Saídas:** Display de 7 segmentos de Cátodo Comum para indicação do nível de alerta ($0$ a $3$) e alarmes lógicos paralelos.
 
 ---
@@ -57,7 +65,13 @@ Onde o Bit 5 ($C_{out}$) assume nível lógico `0` e o Bit 4 assume nível lógi
 
 Para evitar cenários onde uma pane de contaminação isolada (como altíssima turbidez) fosse diluída e mascarada pela média da soma, o circuito implementa uma **Lógica de Sobreelevação (*Override*)**. Foram acoplados blocos de limiares independentes (*Comparadores de 5 bits*) ligados diretamente às portas **OR** de entrada dos Flip-Flops. Desse modo, se qualquer um dos sensores atingir isoladamente um patamar crítico de perigo, o circuito ignora a atenuação da soma e força o estado síncrono para $(N_1N_0) = 11$, disparando imediatamente o nível máximo de alerta (**Nível 3**) no display.
 
-
-Link do Vídeo da Apresentação: https://drive.google.com/file/d/10JCxTmI6hznK7x_0tEeMdDhvsMro1Y6Z/view?usp=drive_link
-Link do Video do Circuito: https://drive.google.com/file/d/15GSFxpngLpf1Q29vYK20TegOaMhPfPF2/view?usp=drive_link
 ---
+
+## 🚀 Como Executar e Testar o Projeto
+
+Siga os passos abaixo para clonar o repositório, abrir o circuito no simulador e validar os cenários de teste estabelecidos.
+
+### 1. Clonando o Repositório
+Para obter uma cópia local do projeto, abra o seu terminal e execute o seguinte comando:
+```bash
+git clone https://github.com/fmandrade-cmd/Circuitos-Digitais.git
