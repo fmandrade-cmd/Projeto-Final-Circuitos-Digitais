@@ -26,7 +26,8 @@ O circuito cumpre rigorosamente os requisitos desejáveis estipulados no regulam
 * **Sensores de Entrada:** 3 entradas de sensoriamento independentes:
   * **Sensor de Turbidez ($S_T$):** Numérico, quantizado em 5 bits ($0$ a $31$).
   * **Sensor de Condutividade ($S_C$):** Numérico, quantizado em 5 bits ($0$ a $31$).
-  * *(Opcional: adicione aqui o 3º sensor binário ou digital utilizado no seu grupo, ex: Sensor de Fluxo/Nível)*.
+  * **Sensor de pH**: Numérico, quantizado em 4 bits ($0$ a $14$).
+  * **Sensor Ultrassônico**: Numérico, quantizado em 1 bit ($0$ ou $1$).
 * **Componentes Utilizados:** Circuitos aritméticos (Somador de 5 bits), Comparadores de magnitude, Flip-Flops (Lógica Sequencial de Estado), Portas Lógicas e um Decodificador Customizado para Display de 7 Segmentos.
 * **Saídas:** Display de 7 segmentos de Cátodo Comum para indicação do nível de alerta ($0$ a $3$) e alarmes lógicos paralelos.
 
