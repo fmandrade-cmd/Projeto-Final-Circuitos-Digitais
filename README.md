@@ -75,3 +75,4 @@ Siga os passos abaixo para clonar o repositório, abrir o circuito no simulador 
 Para obter uma cópia local do projeto, abra o seu terminal e execute o seguinte comando:
 ```bash
 git clone https://github.com/fmandrade-cmd/Circuitos-Digitais.git
+cd [nome-do-repositorio]
