@@ -57,4 +57,7 @@ Onde o Bit 5 ($C_{out}$) assume nível lógico `0` e o Bit 4 assume nível lógi
 
 Para evitar cenários onde uma pane de contaminação isolada (como altíssima turbidez) fosse diluída e mascarada pela média da soma, o circuito implementa uma **Lógica de Sobreelevação (*Override*)**. Foram acoplados blocos de limiares independentes (*Comparadores de 5 bits*) ligados diretamente às portas **OR** de entrada dos Flip-Flops. Desse modo, se qualquer um dos sensores atingir isoladamente um patamar crítico de perigo, o circuito ignora a atenuação da soma e força o estado síncrono para $(N_1N_0) = 11$, disparando imediatamente o nível máximo de alerta (**Nível 3**) no display.
 
+
+Link do Vídeo da Apresentação: https://drive.google.com/file/d/10JCxTmI6hznK7x_0tEeMdDhvsMro1Y6Z/view?usp=drive_link
+Link do Video do Circuito: https://drive.google.com/file/d/15GSFxpngLpf1Q29vYK20TegOaMhPfPF2/view?usp=drive_link
 ---
